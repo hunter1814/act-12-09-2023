@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Act 12-09-2023</title>
+	<style type="text/css">
+		.info{
+			border: 1px solid black;
+			padding: 10px;
+			height: 430px;
+			width: 500px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="info" class="info"></div>
+</body>
+</html>
+<script>
+	function toDisplay(){
+		const details={
+			fname:"Jayson",
+			lname:"Reales",
+			age:"22",
+			occupation:"student",
+			address:{
+				city:"Manito",
+				state:"Albay",
+				country:"Philippines"
+			},
+			displ:function(){
+				let info="Fist Name:&nbsp; &nbsp;"+this.fname+"<br><br>Last Name: &nbsp; &nbsp;"+this.lname+"<br><br>Age: &nbsp; &nbsp;"+this.age+"<br><br>Occupation: &nbsp; &nbsp;"+this.occupation+"<br><br>City: &nbsp; &nbsp;"+this.address.city+"<br><br>State: &nbsp; &nbsp;"+this.address.state+"<br><br>Country: &nbsp; &nbsp;"+this.address.country;
+				document.getElementById("info").innerHTML = info;
+			}
+		}
+		details.displ()
+	}
+	toDisplay()
+</script>
